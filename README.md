@@ -23,7 +23,7 @@ Este projeto está desenvolvido utilizando as tecnologias mais modernas para o f
 -   **Front-end:**
     -   [React](https://reactjs.org/) - Uma biblioteca JavaScript para construir interfaces de usuário.
     -   [Vite](https://vitejs.dev/) - Um ambiente de desenvolvimento front-end extremamente rápido.
-    -   CSS Modules / Styled-Components / Tailwind CSS (escolha o que preferir)
+    -   [Tailwind](https://tailwindcss.com/) CSS 
 
 -   **Back-end:**
     -   [Node.js](https://nodejs.org/) - Ambiente de execução JavaScript server-side.
