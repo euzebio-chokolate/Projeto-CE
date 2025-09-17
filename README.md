@@ -9,7 +9,7 @@
 
 O **TriHardware** é uma aplicação web projetada para ajudar os usuários a encontrar os melhores preços de componentes de hardware de computador em diversas lojas online. Com uma interface rápida e intuitiva, o objetivo é simplificar o processo de pesquisa e comparação de preços, economizando tempo e dinheiro para quem está montando ou atualizando seu PC.
 
-Este projeto está desenvolvido utilizando as tecnologias mais modernas para o front-end e back-end, garantindo uma experiência de usuário fluida, responsiva e com dados atualizados.
+Este projeto está sendo desenvolvido utilizando as tecnologias mais modernas para o front-end e back-end.
 
 ## ✨ Funcionalidades
 
