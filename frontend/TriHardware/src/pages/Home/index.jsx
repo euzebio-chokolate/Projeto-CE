@@ -1,6 +1,33 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { FaSearch } from "react-icons/fa";
 
+const server = axios.create({
+   baseURL: 'http://localhost:3000'
+})
+
 function Home() {
+   const [users, setUSers] = useState([])
+   const [name, setName] = useState('')
+   const [age, setAge] = useState('')
+
+
+
+   useEffect(() => {
+      server.get('/home').then((response) => {
+         console.log(response.data)
+         setUSers(response.data)
+      })
+   }, [])
+
+   function buscar(){
+      server.post('/usuarios', {
+         name
+      }).then ( (response) => {
+         console.log(response)
+      })  
+   }
+
    return (
       <div className="bg-slate-900 min-h-screen flex flex-col ">
 
@@ -18,8 +45,8 @@ function Home() {
                <div className="bg-slate-800 rounded-lg p-8">
                   <p className="pb-4">Produto ou Categoria</p>
                   <div className="flex items-center gap-4 w-full">
-                     <input type="text" placeholder="Ex: RTX 4070, SSD 1TB" className="p-3 bg-slate-900 flex-1 rounded-lg outline-none"/>
-                     <button className="bg-cyan-600 px-5 py-3 rounded-lg flex items-center gap-2 text-white hover:bg-cyan-500 transition">
+                     <input type="text" onChange={event => setName(event.target.value)} placeholder="Ex: RTX 4070, SSD 1TB" className="p-3 bg-slate-900 flex-1 rounded-lg outline-none" />
+                     <button type="submit" onClick={buscar} className="bg-cyan-600 px-5 py-3 rounded-lg flex items-center gap-2 text-white hover:bg-cyan-500 transition">
                         <FaSearch />
                         Pesquisar
                      </button>
@@ -62,7 +89,7 @@ function Home() {
                         Comprar
                      </button>
                   </div>
-                  
+
                   <div className="bg-slate-800 shadow-lg rounded p-6 text-center">
                      <img src="https://via.placeholder.com/150" alt="Produto 3" className="mx-auto mb-4" />
                      <h3 className="text-xl font-bold mb-2">SSD NVMe 2TB</h3>
@@ -91,11 +118,22 @@ function Home() {
 
             {/* Como Funciona */}
             <div className="">
-               
+
             </div>
 
          </div>
-      
+
+         <div className="text-white">
+            <h1>Users</h1>
+            <ul>
+               {users.map(user => (
+                  <li key={user.name}>
+                     Nome: {user.name} - Idade: {user.age}
+                  </li>
+               ))}
+            </ul>
+         </div>
+
          {/* Footer */}
          <footer className="bg-gray-800 text-white p-6 text-center">
             © 2025 TriHardware. Todos os direitos reservados.
