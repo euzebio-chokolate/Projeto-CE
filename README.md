@@ -30,6 +30,3 @@ Este projeto está sendo desenvolvido utilizando as tecnologias mais modernas pa
 
 -   **Banco de Dados:**
     -   [MongoDB](https://www.mongodb.com/) - Banco de dados NoSQL orientado a documentos.
-
-
-https://www.canva.com/design/DAG4FHTDqAQ/1i15uDF9wnUBFXjfVAKa1g/edit?utm_content=DAG4FHTDqAQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
